@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_36sdp"
+        app:constraint_referenced_ids="imageShuffle, imagePrevious, imagePlay, imageNext, imageLoop"
+        app:flow_maxElementsWrap="5"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/imageShuffle"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+       android:padding="@dimen/_14sdp"
+        android:src="@drawable/ic_round_shuffle_24"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shapeAppearance="@style/NeuMorphismImageSmall"
+        app:tint="@color/primary"/>
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/imagePrevious"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        android:padding="@dimen/_16sdp"
+        android:src="@drawable/ic_baseline_skip_previous_24"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shapeAppearance="@style/NeuMorphismImageNormal"
+        app:tint="@color/primary"
+        tools:ignore="MissingConstraints" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/imagePlay"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:padding="@dimen/_20sdp"
+        android:src="@drawable/ic_baseline_pause_24"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shapeAppearance="@style/NeuMorphismImageLarge"
+        app:tint="@color/primary"
+        app:neumorph_shapeType="basin"
+        tools:ignore="MissingConstraints" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/imageNext"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        android:padding="@dimen/_16sdp"
+        android:src="@drawable/ic_baseline_skip_next_24"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shapeAppearance="@style/NeuMorphismImageNormal"
+        app:tint="@color/primary"
+        tools:ignore="MissingConstraints" />
+
+    <soup.neumorphism.NeumorphImageView
+        android:id="@+id/imageLoop"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:padding="@dimen/_14sdp"
+        android:src="@drawable/ic_round_loop_24"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shapeAppearance="@style/NeuMorphismImageSmall"
+        app:tint="@color/primary"
+        tools:ignore="MissingConstraints"/>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/cardSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toTopOf="@+id/imagePlay"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        >
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_6sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_margin="2dp"
+            android:progressDrawable="@drawable/progress_background"
+            android:splitTrack="false"
+            android:thumbTint="@android:color/transparent"
+            />
+
+    </soup.neumorphism.NeumorphCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
